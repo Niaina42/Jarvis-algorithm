@@ -2,17 +2,19 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1484.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gafi.jarvis.Controller">
    <children>
       <VBox prefHeight="970.0" prefWidth="282.0" style="-fx-background-color: #394246; -fx-padding: 15px;">
          <children>
             <VBox layoutX="25.0" layoutY="78.0" prefHeight="17.0" prefWidth="252.0" />
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Projet GAFI" wrappingWidth="251.20703125">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Projet GAFI IGGLIA4" wrappingWidth="251.20703125">
                <font>
                   <Font name="Dhurjati" size="27.0" />
                </font>
@@ -24,26 +26,78 @@
             <VBox layoutX="25.0" layoutY="126.0" prefHeight="17.0" prefWidth="252.0" />
             <Button layoutX="35.0" layoutY="127.0" mnemonicParsing="false" onAction="#navigateToExoThree" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Exercice 3" textFill="#394246" />
             <VBox layoutX="25.0" layoutY="254.0" prefHeight="17.0" prefWidth="252.0" />
-            <Button layoutX="25.0" layoutY="271.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Membres" textFill="#394246" />
+            <Button layoutX="25.0" layoutY="271.0" mnemonicParsing="false" onAction="#navigateToMember" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Membres" textFill="#394246" />
          </children>
       </VBox>
       <VBox layoutX="308.0" layoutY="24.0" prefHeight="931.0" prefWidth="1152.0" style="-fx-border-color: #000;">
          <children>
-            <Label fx:id="testLabel" prefHeight="53.0" prefWidth="388.0" style="-fx-label-padding: 10px;" text="Exercice 1" textFill="#394246">
-               <font>
-                  <Font name="Dhurjati" size="23.0" />
-               </font></Label>
-            <Label fx:id="description" style="-fx-padding: 10px;" text="Géneration de données aléatoire" />
-            <Label fx:id="pointListLabel" layoutX="11.0" layoutY="64.0" style="-fx-padding: 10px;" text="   ">
-               <font>
-                  <Font name="Dyuthi Regular" size="22.0" />
-               </font></Label>
-            <VBox prefHeight="67.0" prefWidth="937.0" style="-fx-padding: 10px;">
-               <children>
-                  <Button fx:id="generateDataBtn" mnemonicParsing="false" style="-fx-padding: 10px; -fx-background-color: #394246;" text="Regénérer" textFill="WHITE" />
-               </children>
-            </VBox>
-            <VBox fx:id="chartBox" prefHeight="200.0" prefWidth="100.0" />
+            <ScrollPane prefHeight="931.0" prefWidth="1150.0">
+               <content>
+                  <VBox prefHeight="973.0" prefWidth="1151.0">
+                     <children>
+                        <Label fx:id="testLabel" prefHeight="52.0" prefWidth="1107.0" style="-fx-label-padding: 10px;" text="Exercice 1" textFill="#394246">
+                           <font>
+                              <Font name="Dhurjati" size="23.0" />
+                           </font>
+                        </Label>
+                        <VBox fx:id="generateDataBtn" prefHeight="55.0" prefWidth="1151.0" style="-fx-padding: 10px;">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#initialize" style="-fx-padding: 10px; -fx-background-color: #394246;" text="Regénérer" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                        <Label fx:id="pointListLabel" style="-fx-padding: 10px;">
+                           <font>
+                              <Font name="Dyuthi Regular" size="22.0" />
+                           </font>
+                        </Label>
+                        <VBox fx:id="memberBox" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="388.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="766.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="388.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="10.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                       <font>
+                                          <Font name="Dhurjati" size="22.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="chartBox" prefHeight="541.0" prefWidth="1151.0" />
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
          </children>
       </VBox>
    </children>

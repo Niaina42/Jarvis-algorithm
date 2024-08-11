@@ -12,7 +12,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Projet GAFI IGGLIA-4 : parcour de Jarvis");
+        stage.setTitle("Projet GAFI IGGLIA-4 : parcours de Jarvis");
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
