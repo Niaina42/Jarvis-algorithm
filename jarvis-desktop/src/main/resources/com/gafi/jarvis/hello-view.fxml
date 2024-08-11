@@ -9,14 +9,14 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1484.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gafi.jarvis.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1246.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gafi.jarvis.Controller">
    <children>
-      <VBox prefHeight="970.0" prefWidth="282.0" style="-fx-background-color: #394246; -fx-padding: 15px;">
+      <VBox prefHeight="728.0" prefWidth="282.0" style="-fx-background-color: #394246; -fx-padding: 15px;">
          <children>
             <VBox layoutX="25.0" layoutY="78.0" prefHeight="17.0" prefWidth="252.0" />
             <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Projet GAFI IGGLIA4" wrappingWidth="251.20703125">
                <font>
-                  <Font name="Dhurjati" size="27.0" />
+                  <Font name="Webdings" size="20.0" />
                </font>
             </Text>
             <VBox layoutX="25.0" layoutY="126.0" prefHeight="46.0" prefWidth="252.0" />
@@ -29,15 +29,15 @@
             <Button layoutX="25.0" layoutY="271.0" mnemonicParsing="false" onAction="#navigateToMember" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Membres" textFill="#394246" />
          </children>
       </VBox>
-      <VBox layoutX="308.0" layoutY="24.0" prefHeight="931.0" prefWidth="1152.0" style="-fx-border-color: #000;">
+      <VBox layoutX="292.0" layoutY="11.0" prefHeight="707.0" prefWidth="942.0" style="-fx-border-color: #000;">
          <children>
-            <ScrollPane prefHeight="1000.0" prefWidth="1150.0">
+            <ScrollPane prefHeight="704.0" prefWidth="941.0">
                <content>
-                  <VBox prefHeight="1200.0" prefWidth="1151.0">
+                  <VBox prefHeight="900.0" prefWidth="922.0">
                      <children>
-                        <Label fx:id="testLabel" prefHeight="57.0" prefWidth="1107.0" style="-fx-label-padding: 10px;" text="Exercice 1" textFill="#394246">
+                        <Label fx:id="testLabel" prefHeight="62.0" prefWidth="906.0" style="-fx-label-padding: 10px;" text="Exercice 1" textFill="#394246">
                            <font>
-                              <Font name="Dhurjati" size="23.0" />
+                              <Font name="Webdings" size="20.0" />
                            </font>
                         </Label>
                         <VBox fx:id="generateDataBtn" prefHeight="22.0" prefWidth="1151.0" style="-fx-padding: 10px;">
@@ -46,50 +46,50 @@
                            </children>
                         </VBox>
                         <TextFlow fx:id="textFlowArea" prefHeight="29.0" prefWidth="1151.0" style="-fx-padding: 10px;" />
-                        <VBox fx:id="memberBox" prefHeight="200.0" prefWidth="100.0">
+                        <VBox fx:id="memberBox" prefHeight="138.0" prefWidth="942.0">
                            <children>
-                              <TextFlow prefHeight="238.0" prefWidth="1151.0">
+                              <TextFlow prefHeight="204.0" prefWidth="922.0">
                                  <children>
-                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="54.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="388.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="312.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="766.0" layoutY="10.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="615.0" layoutY="10.0" prefHeight="11.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="10.0" layoutY="60.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="388.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="312.0" layoutY="60.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="10.0" layoutY="78.0" prefHeight="68.0" prefWidth="378.0" style="-fx-padding: 10px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                                    <Label layoutX="615.0" layoutY="60.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
                                        <font>
-                                          <Font name="Dhurjati" size="22.0" />
+                                          <Font name="Javanese Text" size="14.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </TextFlow>
                            </children>
                         </VBox>
-                        <VBox fx:id="chartBox" prefHeight="808.0" prefWidth="1151.0" />
+                        <VBox fx:id="chartBox" prefHeight="650.0" prefWidth="942.0" />
                      </children>
                   </VBox>
                </content>

@@ -34,7 +34,7 @@ public class Controller {
     private void setPageTitle(String text) {
         textFlowArea.getChildren().clear();
         Text newText = new Text(text); // Optionally, set text properties
-        newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+        newText.setStyle("-fx-font-size: 16px; -fx-font-family: Javanese Text; -fx-fill: #394246;");
         textFlowArea.getChildren().add(newText);
     }
 
@@ -44,7 +44,7 @@ public class Controller {
         textFlowArea.getChildren().clear();
         for (int i = 0; i < this.generatedRandomValues.length; i++) {
             Text newText = new Text("p"+i+showPoint(this.generatedRandomValues[i])+" ; "); // Optionally, set text properties
-            newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+            newText.setStyle("-fx-font-size: 16px; -fx-font-family: Javanese Text; -fx-fill: #394246;");
             // Add the Text node to the VBox
             textFlowArea.getChildren().add(newText);
         }
@@ -247,8 +247,8 @@ public class Controller {
 
         textFlowArea.getChildren().clear();
         for (int i = 0; i < random_values.length; i++) {
-            Text newText = new Text("p"+i+showPoint(random_values[i])+" ; "); // Optionally, set text properties
-            newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+            Text newText = new Text("p"+i+":"+showPoint(random_values[i])+" ; "); // Optionally, set text properties
+            newText.setStyle("-fx-font-size: 16px; -fx-font-family: Javanese Text; -fx-fill: #394246;");
             // Add the Text node to the VBox
             textFlowArea.getChildren().add(newText);
         }
@@ -266,7 +266,7 @@ public class Controller {
         this.encConvString = newEncConvString;
 
         // For exo 2
-        this.anglePolaireText = "p0="+showPoint(this.generatedRandomValues[0])+" p1="+showPoint(this.generatedRandomValues[1])+" p2="+showPoint(this.generatedRandomValues[2]);
+        this.anglePolaireText = "p0:"+showPoint(this.generatedRandomValues[0])+" p1:"+showPoint(this.generatedRandomValues[1])+" p2:"+showPoint(this.generatedRandomValues[2]);
         this.anglePolaireResult = jv.anglePolaireInferieur(this.generatedRandomValues[0], this.generatedRandomValues[1], this.generatedRandomValues[2]);
     }
 }
