@@ -7,6 +7,8 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
 import java.util.List;
 
@@ -21,27 +23,41 @@ public class Controller {
     @FXML
     private Label testLabel;
     @FXML
-    private Label pointListLabel;
-    @FXML
     private VBox generateDataBtn;
     @FXML
     private VBox chartBox;
     @FXML
     private VBox memberBox;
+    @FXML
+    private TextFlow textFlowArea;
+
+    private void setPageTitle(String text) {
+        textFlowArea.getChildren().clear();
+        Text newText = new Text(text); // Optionally, set text properties
+        newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+        textFlowArea.getChildren().add(newText);
+    }
 
     @FXML
     protected void navigateToExoOne() {
         testLabel.setText("Generation des points aleatoires");
-        pointListLabel.setText(generatedValueString);
+        textFlowArea.getChildren().clear();
+        for (int i = 0; i < this.generatedRandomValues.length; i++) {
+            Text newText = new Text("p"+i+showPoint(this.generatedRandomValues[i])+" ; "); // Optionally, set text properties
+            newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+            // Add the Text node to the VBox
+            textFlowArea.getChildren().add(newText);
+        }
         // Show page one section
         generateDataBtn.setVisible(true);
         generateDataBtn.setManaged(true);
-        pointListLabel.setVisible(true);
-        pointListLabel.setManaged(true);
         memberBox.setVisible(false);
         memberBox.setManaged(false);
         // Efface les enfants du chartBox
         chartBox.getChildren().clear();
+
+        // Créer la chart de liste de point
+        createPointListChart(chartBox);
     }
     @FXML
     protected void navigateToExoTwo() {
@@ -51,12 +67,10 @@ public class Controller {
         // Hide page one section
         generateDataBtn.setVisible(false);
         generateDataBtn.setManaged(false);
-        pointListLabel.setVisible(true);
-        pointListLabel.setManaged(true);
         memberBox.setVisible(false);
         memberBox.setManaged(false);
         // Show second page section
-        pointListLabel.setText(plist);
+        setPageTitle(plist);
 
         // Efface les enfants du chartBox
         chartBox.getChildren().clear();
@@ -87,17 +101,15 @@ public class Controller {
     }
     @FXML
     protected void navigateToExoThree() {
-        testLabel.setText("Exercice 3");
+        testLabel.setText("Enveloppe convexe");
 
         generateDataBtn.setVisible(false);
         generateDataBtn.setManaged(false);
         memberBox.setVisible(false);
         memberBox.setManaged(false);
 
-        pointListLabel.setVisible(true);
-        pointListLabel.setManaged(true);
         // Show third page section
-        pointListLabel.setText(this.encConvString);
+        setPageTitle(this.encConvString);
 
         // Efface les enfants du chartBox
         chartBox.getChildren().clear();
@@ -112,13 +124,13 @@ public class Controller {
     protected void navigateToMember() {
         testLabel.setText("Les membres de ce projet GAFI IGGLIA4 (2023-2024)");
 
+        textFlowArea.getChildren().clear();
+
         memberBox.setVisible(true);
         memberBox.setManaged(true);
         chartBox.getChildren().clear();
         generateDataBtn.setVisible(false);
         generateDataBtn.setManaged(false);
-        pointListLabel.setVisible(false);
-        pointListLabel.setManaged(false);
     }
     private void createPointListChart(VBox chartArea) {
         // Créer les axes X et Y
@@ -195,7 +207,7 @@ public class Controller {
         String result = "";
         for (int i = 0; i < 2; i++) {
             if(i == 0)
-                result += "("+point[i]+",";
+                result += "("+point[i]+", ";
             else
                 result += point[i]+")";
         }
@@ -218,29 +230,40 @@ public class Controller {
             for (int j = 0; j < 2; j++) {
                 if(j == 0) {
                     // System.out.print("p"+i+" = ["+random_values[i][j]+",");
-                    newValue += "p"+i+" = ("+random_values[i][j]+",";
-                    this.generatedValueString += "p"+i+" = ("+random_values[i][j]+",";
+                    newValue += "p"+i+" : ("+random_values[i][j]+",";
                 }
                 else {
                     // System.out.print(random_values[i][j]+"]");
                     newValue += random_values[i][j]+") ";
-                    this.generatedValueString += random_values[i][j]+") ";
                 }
             }
         }
+        // Créer la chart de liste de point
+        chartBox.getChildren().clear();
+        createPointListChart(chartBox);
 
         // Set default data in View
-        pointListLabel.setText(newValue);
+        this.generatedValueString = newValue;
+
+        textFlowArea.getChildren().clear();
+        for (int i = 0; i < random_values.length; i++) {
+            Text newText = new Text("p"+i+showPoint(random_values[i])+" ; "); // Optionally, set text properties
+            newText.setStyle("-fx-font-size: 22px; -fx-font-family: Dyuthi; -fx-fill: #394246;");
+            // Add the Text node to the VBox
+            textFlowArea.getChildren().add(newText);
+        }
 
         // Find envelop convex
         List<int[]> envconv = jv.findEnvConv(jv.getData());
         List<int[]> dataList = jv.getListData();
 
         this.encConvData = convertTo2DArray(envconv);
+        String newEncConvString = "";
 
         for (int[] p : envconv) {
-            this.encConvString += "p"+dataList.indexOf(p)+": "+"(" + p[0] + "," + p[1] + "); ";
+            newEncConvString += "p"+dataList.indexOf(p)+":"+"(" + p[0] + "," + p[1] + ") ; ";
         }
+        this.encConvString = newEncConvString;
 
         // For exo 2
         this.anglePolaireText = "p0="+showPoint(this.generatedRandomValues[0])+" p1="+showPoint(this.generatedRandomValues[1])+" p2="+showPoint(this.generatedRandomValues[2]);
