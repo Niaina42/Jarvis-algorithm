@@ -40,7 +40,7 @@ public class Controller {
 
     @FXML
     protected void navigateToExoOne() {
-        testLabel.setText("Generation des points aleatoires");
+        testLabel.setText("Génération de points du plan");
         textFlowArea.getChildren().clear();
         for (int i = 0; i < this.generatedRandomValues.length; i++) {
             Text newText = new Text("p"+i+showPoint(this.generatedRandomValues[i])+" ; "); // Optionally, set text properties
@@ -61,7 +61,7 @@ public class Controller {
     }
     @FXML
     protected void navigateToExoTwo() {
-        testLabel.setText("Angle polaire");
+        testLabel.setText("Angle polaire inferieur");
         String plist = this.anglePolaireText + "=>" + this.anglePolaireResult;
 
         // Hide page one section
@@ -101,7 +101,7 @@ public class Controller {
     }
     @FXML
     protected void navigateToExoThree() {
-        testLabel.setText("Enveloppe convexe");
+        testLabel.setText("Calcul d'enveloppes convexes avec parcours de Jarvis");
 
         generateDataBtn.setVisible(false);
         generateDataBtn.setManaged(false);
@@ -219,7 +219,7 @@ public class Controller {
         // Get data from Algorithm
         Jarvis jv = new Jarvis(20);
 
-        testLabel.setText("Generation des points aleatoires");
+        testLabel.setText("Génération de points du plan");
         int[][] random_values = jv.pointParHasard();
         this.generatedRandomValues = random_values;
 
