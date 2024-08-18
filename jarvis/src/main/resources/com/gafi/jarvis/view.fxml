@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1246.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gafi.jarvis.Controller">
+  <children>
+    <VBox prefHeight="728.0" prefWidth="282.0" style="-fx-background-color: #394246; -fx-padding: 15px;">
+      <children>
+        <VBox layoutX="25.0" layoutY="78.0" prefHeight="17.0" prefWidth="252.0" />
+        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Projet GAFI IGGLIA4" wrappingWidth="251.20703125">
+          <font>
+            <Font name="Webdings" size="20.0" />
+          </font>
+        </Text>
+        <VBox layoutX="25.0" layoutY="126.0" prefHeight="46.0" prefWidth="252.0" />
+        <Button fx:id="exoOneBtn" mnemonicParsing="false" onAction="#navigateToExoOne" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Exercice 1" textFill="#394246" />
+        <VBox prefHeight="17.0" prefWidth="252.0" />
+        <Button layoutX="35.0" layoutY="79.0" mnemonicParsing="false" onAction="#navigateToExoTwo" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Exercice 2" textFill="#394246" />
+        <VBox layoutX="25.0" layoutY="126.0" prefHeight="17.0" prefWidth="252.0" />
+        <Button layoutX="35.0" layoutY="127.0" mnemonicParsing="false" onAction="#navigateToExoThree" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Exercice 3" textFill="#394246" />
+        <VBox layoutX="25.0" layoutY="254.0" prefHeight="17.0" prefWidth="252.0" />
+        <Button layoutX="25.0" layoutY="271.0" mnemonicParsing="false" onAction="#navigateToMember" prefHeight="48.0" prefWidth="268.0" style="-fx-background-color: #eeeeee; -fx-text-fill: #000000;" text="Membres" textFill="#394246" />
+      </children>
+    </VBox>
+    <VBox layoutX="292.0" layoutY="11.0" prefHeight="707.0" prefWidth="942.0" style="-fx-border-color: #000;">
+      <children>
+        <ScrollPane prefHeight="704.0" prefWidth="941.0">
+          <content>
+            <VBox prefHeight="900.0" prefWidth="922.0">
+              <children>
+                <Label fx:id="testLabel" prefHeight="62.0" prefWidth="906.0" style="-fx-label-padding: 10px;" text="Exercice 1" textFill="#394246">
+                  <font>
+                    <Font name="Webdings" size="20.0" />
+                  </font>
+                </Label>
+                <VBox fx:id="generateDataBtn" prefHeight="22.0" prefWidth="1151.0" style="-fx-padding: 10px;">
+                  <children>
+                    <Button mnemonicParsing="false" onAction="#initialize" style="-fx-padding: 10px; -fx-background-color: #394246;" text="Regénérer les donneés" textFill="WHITE" />
+                  </children>
+                </VBox>
+                <TextFlow fx:id="textFlowArea" prefHeight="29.0" prefWidth="1151.0" style="-fx-padding: 10px;" />
+                <VBox fx:id="memberBox" prefHeight="138.0" prefWidth="942.0">
+                  <children>
+                    <TextFlow prefHeight="204.0" prefWidth="922.0">
+                      <children>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAMANDIMBISON Fy n°8">
+                          <font>
+                            <Font name="Javanese Text" size="14.0" />
+                          </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RAZAFINDRAZAKA Niaina Christopher n°18">
+                          <font>
+                            <Font name="Javanese Text" size="14.0" />
+                          </font>
+                        </Label>
+                        <Label layoutX="312.0" layoutY="10.0" prefHeight="31.0" prefWidth="302.0" style="-fx-padding: 5px;" text=" - Andriamparany Safidiniaina Jocelyn n°27">
+                          <font>
+                            <Font name="Javanese Text" size="14.0" />
+                          </font>
+                        </Label>
+                        <Label layoutX="615.0" layoutY="10.0" prefHeight="11.0" prefWidth="302.0" style="-fx-padding: 5px;" text="- RATOJONANDRASANA Donnat n°16">
+                          <font>
+                            <Font name="Javanese Text" size="14.0" />
+                          </font>
+                        </Label>
+                        <Label layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="464.0" style="-fx-padding: 5px;" text="- RAZAFINDRAKOTO Tefy Nantenaina Gaëtan n°30">
+                          <font>
+                            <Font name="Javanese Text" size="14.0" />
+                          </font>
+                        </Label>
+                      </children>
+                    </TextFlow>
+                  </children>
+                </VBox>
+                <VBox fx:id="chartBox" prefHeight="650.0" prefWidth="942.0" />
+              </children>
+            </VBox>
+          </content>
+        </ScrollPane>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
